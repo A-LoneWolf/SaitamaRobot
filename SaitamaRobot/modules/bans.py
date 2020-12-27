@@ -142,7 +142,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
             raise
 
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself and leave my Darling Weeb")
+        message.reply_text("I'm not gonna BAN myself and leave my Darling alone!")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member):
