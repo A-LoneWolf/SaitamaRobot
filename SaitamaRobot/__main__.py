@@ -79,9 +79,7 @@ And the following:
 SAITAMA_IMG = "https://github.com/A-LoneWolf/SaitamaRobot/raw/A-LoneWolf-weeb-Dev/IMG_20201229_211219_518.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Zero Two doesn't require any donations as of now but \
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars)."""
+Zero Two doesn't require any donations as of now however you can support us by adding me in to more and more groups."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -203,6 +201,14 @@ def start(update: Update, context: CallbackContext):
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ], 
+                     [
+                         InlineKeyboardButton(
+                             text="Getting started guide",
+                             url="https://t.me/Zero2Two_support/3"),
+                         InlineKeyboardButton(
+                             text="🔔 Updates Channel",
+                             url="https://t.me/Zero2Two_support")
+                     ],
                      [
                          InlineKeyboardButton(
                              text="🗄 Source code",
