@@ -1,5 +1,16 @@
 RUN_STRINGS = (
     "Now you see me, now you don't."
+    "Goes Beyond plus Ultra and Breaks a leg.",
+    "TURBO Mode Activated",
+    "That's the wrong way!",
+    "NEZUKOO CHAAAAN!",
+    "KAZUMA, SAVE ME from the slimes",
+    "Hey take responsibilty for what you just did!",
+    "Throws Wheelchair and STARTS RUNNING",
+    "Achives Light Speed.",
+    "Ara Ara Sayonara.",
+    "Kawai kotto.",
+    "As a Wise man once Said ... RUN!",
     "ε=ε=ε=ε=┌(;￣▽￣)┘",
     "Get back here!",
     "REEEEEEEEEEEEEEEEEE!!!!!!!",
