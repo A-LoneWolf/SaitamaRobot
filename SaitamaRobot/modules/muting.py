@@ -26,17 +26,17 @@ def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            reply = "I can't seem to find this user"
+            reply = "I can't seem to find this Comarade"
             return reply
         else:
             raise
 
     if user_id == bot.id:
-        reply = "I'm not gonna MUTE myself, How high are you?"
+        reply = "I'm not gonna MUTE myself, You should stop smoking cheap weed?"
         return reply
 
     if is_user_admin(chat, user_id, member) or user_id in TIGERS:
-        reply = "Can't. Find someone else to mute but not this one."
+        reply = "Can't. He is my Darling."
         return reply
 
     return None
@@ -83,7 +83,7 @@ def mute(update: Update, context: CallbackContext) -> str:
         return log
 
     else:
-        message.reply_text("This user is already muted!")
+        message.reply_text("This user is already has his mouth taped!")
 
     return ""
 
@@ -140,8 +140,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             )
     else:
         message.reply_text(
-            "This user isn't even in the chat, unmuting them won't make them talk more than they "
-            "already do!")
+            "This user isn't even in the chat, are you on Drugs!")
 
     return ""
 
@@ -205,7 +204,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
                 parse_mode=ParseMode.HTML)
             return log
         else:
-            message.reply_text("This user is already muted.")
+            message.reply_text("This Comarade is already muted.")
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
@@ -216,7 +215,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
             LOGGER.warning(update)
             LOGGER.exception("ERROR muting user %s in chat %s (%s) due to %s",
                              user_id, chat.title, chat.id, excp.message)
-            message.reply_text("Well damn, I can't mute that user.")
+            message.reply_text("Well damn, I can't mute that Comarade.")
 
     return ""
 
