@@ -1,5 +1,5 @@
 RUN_STRINGS = (
-    "Now you see me, now you don't."
+    "Now you see me, now you don't.",
     "Goes Beyond plus Ultra and Breaks a leg.",
     "TURBO Mode Activated",
     "That's the wrong way!",
