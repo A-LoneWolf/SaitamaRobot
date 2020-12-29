@@ -46,7 +46,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             raise
 
     if user_id == bot.id:
-        message.reply_text("Oh yeah, ban myself, are you on drugs!"")
+        message.reply_text("Oh yeah, ban myself, are you on drugs!")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
