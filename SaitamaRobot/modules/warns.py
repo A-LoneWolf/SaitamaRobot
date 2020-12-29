@@ -42,19 +42,19 @@ def warn(user: User,
 
     if user.id in TIGERS:
         if warner:
-            message.reply_text("Tigers cant be warned.")
+            message.reply_text("Klaxosaur cant be warned.")
         else:
             message.reply_text(
-                "Tiger triggered an auto warn filter!\n I can't warn tigers but they should avoid abusing this."
+                "Klaxosaur triggered an auto warn filter!\n I can't warn Klaxosaur but they should avoid abusing this."
             )
         return
 
     if user.id in WOLVES:
         if warner:
-            message.reply_text("Wolf disasters are warn immune.")
+            message.reply_text("VIRM disasters are warn immune.")
         else:
             message.reply_text(
-                "Wolf Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this."
+                "VIRM Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this."
             )
         return
 
@@ -155,7 +155,7 @@ def button(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "User already has no warns.", parse_mode=ParseMode.HTML)
+                "Comrade already has no warns.", parse_mode=ParseMode.HTML)
 
     return ""
 
@@ -234,7 +234,7 @@ def warns(update: Update, context: CallbackContext):
                 f"User has {num_warns}/{limit} warns, but no reasons for any of them."
             )
     else:
-        update.effective_message.reply_text("This user doesn't have any warns!")
+        update.effective_message.reply_text("This Comrade doesn't have any warns!")
 
 
 # Dispatcher handler stop - do not async
