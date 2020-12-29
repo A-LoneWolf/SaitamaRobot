@@ -37,7 +37,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not (promoter.can_promote_members or
             promoter.status == "creator") and not user.id in DRAGONS:
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("You aren't my darling so you can't do that!")
         return
 
     user_id = extract_user(message, args)
@@ -55,12 +55,12 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'administrator' or user_member.status == 'creator':
         message.reply_text(
-            "How am I meant to promote someone that's already an admin?")
+            "How am I meant to promote someone that's already my Darling?")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't promote myself! Get an admin to do it for me.")
+            "Make me your Darling, So I can get a taste of you.")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -81,7 +81,7 @@ def promote(update: Update, context: CallbackContext) -> str:
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
             message.reply_text(
-                "I can't promote someone who isn't in the group.")
+                "He is in a Different Universe.")
         else:
             message.reply_text("An error occured while promoting.")
         return
@@ -129,7 +129,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how would I demote them?")
+            "This person my is Darling, why would I demote them?")
         return
 
     if not user_member.status == 'administrator':
@@ -138,7 +138,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't demote myself! Get an admin to do it for me.")
+            "If my darling don't want me here, I will leave.")
         return
 
     try:
