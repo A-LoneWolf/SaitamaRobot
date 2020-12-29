@@ -24,31 +24,32 @@ from SaitamaRobot.modules.helper_funcs.misc import send_to_list
 GBAN_ENFORCE_GROUP = 6
 
 GBAN_ERRORS = {
-    "User is an administrator of the chat",
-    "Chat not found",
+    "User is my Darling",
+    "Maybe I m Blind cause I Don't see the chat",
     "Not enough rights to restrict/unrestrict chat member",
+    "You aren't my Darling so you can't restrict/unrestrict chat member",
     "User_not_participant",
     "Peer_id_invalid",
     "Group chat was deactivated",
-    "Need to be inviter of a user to kick it from a basic group",
+    "Need to be inviter of a user to Kill from a basic group",
     "Chat_admin_required",
     "Only the creator of a basic group can kick group administrators",
     "Channel_private",
     "Not in the chat",
-    "Can't remove chat owner",
+    "Can't remove Darling",
 }
 
 UNGBAN_ERRORS = {
-    "User is an administrator of the chat",
+    "User is my Darling",
     "Chat not found",
-    "Not enough rights to restrict/unrestrict chat member",
+    "You aren't my Darling so you can't restrict/unrestrict chat member",
     "User_not_participant",
     "Method is available for supergroup and channel chats only",
     "Not in the chat",
     "Channel_private",
     "Chat_admin_required",
     "Peer_id_invalid",
-    "User not found",
+    "Comrade not found",
 }
 
 
@@ -91,11 +92,11 @@ def gban(update: Update, context: CallbackContext):
         return
 
     if int(user_id) in WOLVES:
-        message.reply_text("That's a Wolf! They cannot be banned!")
+        message.reply_text("That's a VIRM! They cannot be banned!")
         return
 
     if user_id == bot.id:
-        message.reply_text("You uhh...want me to punch myself?")
+        message.reply_text("You uhh...want me to Kill myself?")
         return
 
     if user_id in [777000, 1087968824]:
