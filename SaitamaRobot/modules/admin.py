@@ -365,7 +365,7 @@ def adminlist(update, context):
             'Fetching group admins...', quote=False, parse_mode=ParseMode.HTML)
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "Admins in <b>{}</b>:".format(
+    text = "Here are the list of my Darlings in <b>{}</b>:".format(
         html.escape(update.effective_chat.title))
 
     bot_admin_list = []
