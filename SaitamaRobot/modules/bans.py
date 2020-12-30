@@ -233,7 +233,7 @@ def punch(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if is_user_ban_protected(chat, user_id):
-        message.reply_text("I really wish I could kill this user....")
+        message.reply_text("If you Touch my Darling, I will KILL YOU!")
         return log_message
 
     res = chat.unban_member(user_id)  # unban on current user = kick
