@@ -88,7 +88,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted <b>{user_member.user.first_name or user_id}</b>!",
+        f"Let me get a taste of you <b>{user_member.user.first_name or user_id}</b> After all...you are now my darling!",
         parse_mode=ParseMode.HTML)
 
     log_message = (
