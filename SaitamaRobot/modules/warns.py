@@ -37,6 +37,7 @@ def warn(user: User,
          message: Message,
          warner: User = None) -> str:
     if is_user_admin(chat, user.id):
+        return
             message.reply_text("The weak have no Rights and Choices.")
         return
 
