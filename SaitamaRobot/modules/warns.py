@@ -70,16 +70,16 @@ def warn(user: User,
         if soft_warn:  # punch
             chat.unban_member(user.id)
             reply = (
-                f"<code>❕</code><b>*Kick Initiated!*</b>\n{mention_html(user.id, user.first_name)}"
-                f"<code> </code><b>has been kicked</b>"
-                f"<code> </code><b>by</b> {warner_tag}")
+                f"<code>❕</code><b>Kick Initiated!</b>\n{mention_html(user.id, user.first_name)}"
+                f"<code> </code>has been kicked"
+                f"<code> </code>by {warner_tag}")
 
         else:  # ban
             chat.kick_member(user.id)
             reply = (
-                f"<code>❕</code><b>*Ban Initiated!*</b>\n{mention_html(user.id, user.first_name)}"
-                f"<code> </code><b>has been Banned</b>"
-                f"<code> </code><b>by</b> {warner_tag}")
+                f"<code>❕</code><b>Ban Initiated!</b>\n{mention_html(user.id, user.first_name)}"
+                f"<code> </code>has been Banned"
+                f"<code> </code>by {warner_tag}")
 
         for warn_reason in reasons:
             reply += f"\n - {html.escape(warn_reason)}"
@@ -91,7 +91,7 @@ def warn(user: User,
                       f"<b>Admin:</b> {warner_tag}\n"
                       f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
                       f"<b>Reason:</b> {reason}\n"
-                      f"<b>Counts:</b> <code>{num_warns}/{limit}</code>")
+                      f"<b>Counts:</b> <code>{num_warns} out of {limit}</code>")
 
     else:
         keyboard = InlineKeyboardMarkup([[
@@ -100,18 +100,18 @@ def warn(user: User,
         ]])
 
         reply = (
-            f"<code>❕</code><b>*Warning Initiated!*</b> *{num_warns}* out of *{limit}*\n"
-            f"<code> </code><b>Roronao Zoro</b> {mention_html(user.id, user.first_name)}\n"
-            f"<code> </code><b>has been warned by</b> {warner_tag}")
+            f"<code>❕</code><b>Warning</b> Initiated! <b>{num_warns}</b> out of <b>{limit}</b>\n"
+            f"<code> </code>Roronao Zoro {mention_html(user.id, user.first_name)}"
+            f"<code> </code>has been warned by {warner_tag}")
         if reason:
-            reply += f"\n<code> </code><b>•  Reason:</b> {html.escape(reason)}"
+            reply += f"\n<code> </code><b>Reason:</b> {html.escape(reason)}"
 
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
                       f"#WARN\n"
                       f"<b>Admin:</b> {warner_tag}\n"
                       f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
                       f"<b>Reason:</b> {reason}\n"
-                      f"<b>Counts:</b> <code>{num_warns}/{limit}</code>")
+                      f"<b>Counts:</b> <code>{num_warns} out of {limit}</code>")
 
     try:
         message.reply_text(
