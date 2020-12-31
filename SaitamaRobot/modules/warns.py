@@ -37,7 +37,7 @@ def warn(user: User,
          message: Message,
          warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-            message.reply_text("The weak have no Rights and Choices.")
+         #message.reply_text("The weak have no Rights and Choices.")
         return
 
     if user.id in TIGERS:
