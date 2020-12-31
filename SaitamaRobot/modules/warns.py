@@ -100,8 +100,8 @@ def warn(user: User,
         ]])
 
         reply = (
-            f"<code>❕</code><b>Warning</b> Initiated! <b>{num_warns}</b> out of <b>{limit}</b>\n"
-            f"<code> </code>Roronao Zoro {mention_html(user.id, user.first_name)}"
+            f"<code>❕</code><b>Warning Initiated!</b> <b>{num_warns}</b> out of <b>{limit}</b>\n"
+            f"<code></code>Roronao Zoro {mention_html(user.id, user.first_name)}"
             f"<code> </code>has been warned by {warner_tag}")
         if reason:
             reply += f"\n<code> </code><b>Reason:</b> {html.escape(reason)}"
