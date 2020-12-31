@@ -37,27 +37,26 @@ def warn(user: User,
          message: Message,
          warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-         if warner:
-            message.reply_text("The weak have no Rights and Choices.")
+         #message.reply_text("The weak have no Rights and Choices.")
         return
 
-  #  if user.id in TIGERS:
-  #      if warner:
-  #          message.reply_text("Klaxosaur cant be warned.")
-  #      else:
-  #          message.reply_text(
-  #              "Klaxosaur triggered an auto warn filter!\n I can't warn Klaxosaur but they should avoid abusing this."
-  #          )
-  #      return
+    if user.id in TIGERS:
+        if warner:
+            message.reply_text("Klaxosaur cant be warned.")
+        else:
+            message.reply_text(
+                "Klaxosaur triggered an auto warn filter!\n I can't warn Klaxosaur but they should avoid abusing this."
+            )
+        return
 
-  #  if user.id in WOLVES:
-  #      if warner:
-  #          message.reply_text("VIRM disasters are warn immune.")
-  #      else:
-  #          message.reply_text(
-  #              "VIRM Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this."
-  #          )
-  #      return
+    if user.id in WOLVES:
+        if warner:
+            message.reply_text("VIRM disasters are warn immune.")
+        else:
+            message.reply_text(
+                "VIRM Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this."
+            )
+        return
 
     if warner:
         warner_tag = mention_html(warner.id, warner.first_name)
