@@ -37,7 +37,7 @@ def warn(user: User,
          message: Message,
          warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-         #message.reply_text("The weak have no Rights and Choices.")
+        # message.reply_text("The weak have no Rights and Choices.")
         return
 
     if user.id in TIGERS:
@@ -45,7 +45,7 @@ def warn(user: User,
             message.reply_text("Klaxosaur cant be warned.")
         else:
             message.reply_text(
-                "Klaxosaur triggered an auto warn filter!\n I can't warn Klaxosaur but they should avoid abusing this."
+                "Klaxosaur triggered an auto warn filter!\n I can't warn tigers but they should avoid abusing this."
             )
         return
 
@@ -70,15 +70,16 @@ def warn(user: User,
         if soft_warn:  # punch
             chat.unban_member(user.id)
             reply = (
-                f"<code>❕</code><b>*Kick Initiated!*</b>\n"
-                f"<code> </code>{mention_html(user.id, user.first_name)} <b>has been Kicked!</b>"
+                f"<code>❕</code><b>Punch Event</b>\n"
+                f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<code> </code><b>•  Count:</b> {limit}")
 
         else:  # ban
             chat.kick_member(user.id)
             reply = (
-                f"<code>❕</code><b>*Ban Initiated!*</b>\n"
-                f"<code> </code>{mention_html(user.id, user.first_name)} <b>has been Banned!</b>"
-   
+                f"<code>❕</code><b>Ban Event</b>\n"
+                f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<code> </code><b>•  Count:</b> {limit}")
 
         for warn_reason in reasons:
             reply += f"\n - {html.escape(warn_reason)}"
@@ -99,11 +100,9 @@ def warn(user: User,
         ]])
 
         reply = (
-            f"<code>❕</code><b>Warning Initiated!</b>"
-            f"<code> </code><b></b> *{num_warns}* out of *{limit}*.\n")
-            f"<code> </code><b>Roronao Zoro</b> {mention_html(user.id, user.first_name)}"
-            f"<code>❕</code><b>has been warned</b>"
-
+            f"<code>❕</code><b>Warn Event</b>\n"
+            f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<code> </code><b>•  Count:</b> {num_warns}/{limit}")
         if reason:
             reply += f"\n<code> </code><b>•  Reason:</b> {html.escape(reason)}"
 
