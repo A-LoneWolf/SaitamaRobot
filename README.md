@@ -13,7 +13,7 @@ News channel as at [Franxx Updates](https://https://t.me/zerotwoupdates)
 ## Notice
 *No future updates on this repo.* You can deploy a new version of Zero Two using this repo.
 
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ninja7-bot/ZeroTwoRepo)
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/A-LoneWolf/SaitamaRobot/tree/patch-1)
 
 ### NOTE
 1. Get yourself a database from [Elephant SQL](elephantsql.com) instead of using Heroku Add on.
