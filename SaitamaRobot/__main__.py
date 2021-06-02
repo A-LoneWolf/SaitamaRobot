@@ -61,7 +61,7 @@ I am called {}, Pistil for Strelizia.
 
 I help Nines in groups while providing some fun games and anime commands for members. Click /help for help window.
 
-[Setup Protocol](https://t.me/ZeroTwoUpdates/13) | [Source Code](https://github.com/ninja7-bot/ZeroTwoRepo) | [Updates](https://t.me/ZeroTwoUpdates) | [Support](t.me/FranXXSupport)
+[Setup Protocol](https://t.me/Zero2Two_support/3) | [Updates](https://t.me/Zero2Two_support) | [Support](https://t.me/Zero2Two_support)
 """
 
 HELP_STRINGS = """
@@ -88,9 +88,7 @@ ZEROTWO_YAWN = "https://telegra.ph/file/4c6f55dbbe553e003ba14.gif" #"https://tel
 YAWN_CPT = "I wanna sleep, yawn~ 💤"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Zero Two is basically a forked version of Saitama, so there is no needs of funding for me right now. But\
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+Zero Two is basically a forked version so there is no needs of funding for me right now."""
 
 IMPORTED = {}
 MIGRATEABLE = []
